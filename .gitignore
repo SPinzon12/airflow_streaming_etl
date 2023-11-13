@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+data/
+__pycache__/
+venv/
+random_forest_regressor.pkl
+.env
+db_config.json
