@@ -97,8 +97,8 @@ def create_fact_table(df):
         'vin': 'vehicle_vin',
         'daysonmarket': 'days_on_market',
         'engine_type': 'engine',
-        'frame_damaged': 'has_accidents',  # Rename 'frame_damaged' to 'has_accidents'
-        'listing_color': 'color',  # Rename 'listing_color' to 'color'
+        'frame_damaged': 'has_accidents',  
+        'listing_color': 'color',  
         'maximum_seating': 'seating_capacity',
         'transmission': 'transmission',
         'wheel_system_display': 'drivetrain',
@@ -168,6 +168,9 @@ def transform_db(**kwargs):
 
     # Fill NaN values in 'transmission' with 'A'
     cars_df['transmission'].fillna('A', inplace=True)
+
+    # Fill NaNs in 'wheel_system_display' with 'All-Wheel Drive'
+    cars_df['wheel_system_display'].fillna('All-Wheel Drive', inplace=True)
 
     # Replace transmission codes with full names
     cars_df['transmission'] = cars_df['transmission'].replace({
