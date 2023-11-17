@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     # Extract data from csv file
     print("Reading data from CSV file...")
-    cars_df = pd.read_csv("./data/used_cars_data.csv", dtype={"dealer_zip": str}, nrows=1)
+    cars_df = pd.read_csv("./data/used_cars_data.csv", dtype={"dealer_zip": str})
     insert_data(cars_df)
 
     # Extract data from API
